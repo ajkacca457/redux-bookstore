@@ -4,7 +4,7 @@ const books = (state = [], action) => {
     case 'CREATE_BOOK':
       return [...state, action.payload];
     case 'REMOVE_BOOK':
-      return state.filter(item => item.title !== action.payload.title);
+      return state.filter(item => item.id !== action.payload.id);
     default:
       return state;
   }
