@@ -21,6 +21,7 @@ const BooksList = props => {
             <th>Book Id</th>
             <th>Book Title</th>
             <th>Book Category</th>
+            <th>Event</th>
           </tr>
         </thead>
         <tbody>
