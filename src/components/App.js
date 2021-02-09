@@ -1,6 +1,10 @@
+import BooksList from '../containers/BooksList';
+import BooksForm from '../containers/BooksForm';
+
 const App = () => (
   <div className="App">
-    <h1 style={{ color: 'white', fontSize: '200%' }}>Redux-Bookstore</h1>
+    <BooksList />
+    <BooksForm />
   </div>
 );
 
