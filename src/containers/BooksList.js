@@ -7,7 +7,7 @@ const datatableStyle = {
   textAlign: 'center',
   padding: '10px',
   width: '60%',
-  margin: '5% auto',
+  margin: '2% auto',
 };
 
 const BooksList = () => {

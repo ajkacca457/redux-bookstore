@@ -3,13 +3,17 @@ import { categories } from '../data/appdata';
 
 const BooksForm = () => (
   <div className="booksform">
-    <form>
-      <label htmlFor="title">
-        Title:
+    <h3>Add New Book</h3>
+    <form className="form">
+      <div className="formgroup">
+        <span>Book Name: </span>
+        {' '}
+        <br />
         <input type="text" name="title" id="title" />
-      </label>
-      <label htmlFor="category">
-        Category:
+      </div>
+      <div className="formgroup">
+        <span>Book Category: </span>
+        <br />
         <select name="category" id="category">
           {categories.map(category => (
             <option key={`book-category-${category}`} value={category}>
@@ -17,8 +21,8 @@ const BooksForm = () => (
             </option>
           ))}
         </select>
-      </label>
-      <input type="submit" />
+      </div>
+      <button type="submit">Submit</button>
     </form>
   </div>
 );
