@@ -9,7 +9,7 @@ const BooksForm = () => (
         <span>Book Name: </span>
         {' '}
         <br />
-        <input type="text" name="title" id="title" />
+        <input type="text" name="title" id="title" placeholder="enter book name" />
       </div>
       <div className="formgroup">
         <span>Book Category: </span>
