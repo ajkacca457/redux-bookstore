@@ -27,7 +27,8 @@ const BooksForm = props => {
     const { title, category } = state;
     const { createBook } = props;
     if (title === '' || category === '') {
-      console.log("what")
+      alert('please enter proper information');
+      
     } else {
       createBook({
         id: uuidv4(),
