@@ -10,14 +10,14 @@ const btnStyle = {
 };
 
 const Book = props => {
-  const { book } = props;
+  const { book, handleRemoveBook } = props;
   return (
     <>
       <tr>
         <td>{book.id.substring(-1, 3)}</td>
         <td>{book.title}</td>
         <td>{book.category}</td>
-        <td><button type="button" style={btnStyle}>remove</button></td>
+        <td><button type="button" style={btnStyle} onClick={() => handleRemoveBook(book)}>remove</button></td>
       </tr>
     </>
   );
@@ -29,6 +29,7 @@ Book.propTypes = {
     title: PropTypes.string,
     category: PropTypes.string,
   }).isRequired,
+  handleRemoveBook: PropTypes.func.isRequired,
 };
 
 export default Book;
