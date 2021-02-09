@@ -5,8 +5,45 @@ body {
   padding: 0;
   font-family: 'Noto Serif', serif;
   background-color: #212f3c;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 100vh;
+  box-sizing: border-box;
+}
+
+table tr {
+  background-color: #d3d3d3;
+  height: 40px;
+}
+
+.booksform {
+  width: 40%;
+  margin: 2% auto;
+  text-align: center;
+  background-color: white;
+  padding: 10px;
+}
+
+.form {
+  display: inline;
+}
+
+input,
+select {
+  width: 90%;
+  margin: 10px;
+  height: 25px;
+}
+
+form button {
+  width: 50%;
+  height: 30px;
+  background-color: orangered;
+  border: none;
+  color: white;
+  border-radius: 5px;
+}
+
+.booksform h3 {
+  background-color: #212f3c;
+  color: white;
+  margin: 5px;
+  padding: 5px;
 }

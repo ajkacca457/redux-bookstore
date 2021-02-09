@@ -4,7 +4,7 @@ It is a bookstore project that is build with react and redux.
 
 ## Project Display
 
-![screenshot]()
+![screenshot](./src/images/interface1.PNG)
 
 ## Live Demo
 
