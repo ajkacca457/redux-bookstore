@@ -1,6 +1,6 @@
 import { v4 as uuidv4 } from 'uuid';
 
-export const catagories = ['Action', 'Biography', 'History',
+export const categories = ['Action', 'Biography', 'History',
   'Horror', 'Kids', 'Learning', 'Sci-Fi'];
 
 export const books = [
