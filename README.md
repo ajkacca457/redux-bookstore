@@ -1,6 +1,6 @@
 # Redux-Bookstore
 
-It is a bookstore project that is build with react and redux.
+It is a bookstore project that is build with react and redux. User can add book to the store by providing book title and the category where it belongs. This bookstore allows user to filter books based on category. User can also remove book from the store. In future, book progress and chapter tracker will be added to the store.
 
 ## Project Display
 
