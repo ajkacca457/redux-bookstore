@@ -41,7 +41,7 @@ const BooksList = props => {
           </tr>
         </thead>
         <tbody>
-          {books.map(item => (
+          {books.filter(book => filter === book.category || filter === 'All').map(item => (
             <Book key={item.id} book={item} handleRemoveBook={handleRemoveBook} />))}
         </tbody>
       </table>
