@@ -2,7 +2,8 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import Book from '../components/Book';
-import { removeBook } from '../actions';
+import { removeBook, changeFilter } from '../actions';
+import CategoryFilter from '../components/CategoryFilter';
 
 const datatableStyle = {
   backgroundColor: 'white',
@@ -13,13 +14,23 @@ const datatableStyle = {
 };
 
 const BooksList = props => {
-  const { books, removeBook } = props;
+  const {
+    books, removeBook, filter, changeFilter,
+  } = props;
+
   const handleRemoveBook = book => {
     removeBook(book);
+  };
+  const handleFilterChange = filter => {
+    changeFilter(filter);
   };
 
   return (
     <div className="BooksList">
+      <CategoryFilter
+        filter={filter}
+        handleFilterChange={handleFilterChange}
+      />
       <table className="datatable" style={datatableStyle}>
         <thead>
           <tr style={{ backgroundColor: '#707070', color: 'white' }}>
@@ -30,7 +41,7 @@ const BooksList = props => {
           </tr>
         </thead>
         <tbody>
-          {books.map(item => (
+          {books.filter(book => filter === book.category || filter === 'All').map(item => (
             <Book key={item.id} book={item} handleRemoveBook={handleRemoveBook} />))}
         </tbody>
       </table>
@@ -40,10 +51,12 @@ const BooksList = props => {
 
 const mapStateToProps = state => ({
   books: state.books,
+  filter: state.filter,
 });
 
 const mapDispatchToProps = dispatch => ({
   removeBook: book => dispatch(removeBook(book)),
+  changeFilter: filter => dispatch(changeFilter(filter)),
 });
 
 BooksList.propTypes = {
@@ -54,7 +67,9 @@ BooksList.propTypes = {
       category: PropTypes.string,
     }),
   ).isRequired,
+  filter: PropTypes.string.isRequired,
   removeBook: PropTypes.func.isRequired,
+  changeFilter: PropTypes.func.isRequired,
 };
 
 export default connect(mapStateToProps, mapDispatchToProps)(BooksList);
