@@ -7,7 +7,7 @@ import App from './components/App';
 import { books } from './data/appdata';
 import Allreducers from './reducers/index';
 
-const mystore = createStore(Allreducers, { books,filter: 'All' });
+const mystore = createStore(Allreducers, { books, filter: 'All' });
 
 ReactDOM.render(
   <Provider store={mystore}>
