@@ -1,10 +1,10 @@
-const filter = (state = 'All', { type, filter }) => {
-  switch (type) {
+const filter = (state = 'All', action) => {
+  switch (action.type) {
     case 'CHANGE_FILTER':
-      return filter
+      return action.filter;
     default:
-      return state
+      return state;
   }
-}
+};
 
 export default filter;
