@@ -4,8 +4,8 @@ body {
   margin: 0;
   padding: 0;
   font-family: 'Noto Serif', serif;
-  background-color: #212f3c;
   box-sizing: border-box;
+  background-color: #f5f6fa;
 }
 
 table tr {
