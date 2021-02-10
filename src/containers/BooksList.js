@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import Book from '../components/Book';
+import { removeBook } from '../actions';
 
 const datatableStyle = {
   backgroundColor: 'white',
@@ -12,7 +13,11 @@ const datatableStyle = {
 };
 
 const BooksList = props => {
-  const { books } = props;
+  const { books, removeBook } = props;
+  const handleRemoveBook = book => {
+    removeBook(book);
+  };
+
   return (
     <div className="BooksList">
       <table className="datatable" style={datatableStyle}>
@@ -21,11 +26,12 @@ const BooksList = props => {
             <th>Book Id</th>
             <th>Book Title</th>
             <th>Book Category</th>
+            <th>Event</th>
           </tr>
         </thead>
         <tbody>
           {books.map(item => (
-            <Book key={item.id} book={item} />))}
+            <Book key={item.id} book={item} handleRemoveBook={handleRemoveBook} />))}
         </tbody>
       </table>
     </div>
@@ -36,6 +42,10 @@ const mapStateToProps = state => ({
   books: state.books,
 });
 
+const mapDispatchToProps = dispatch => ({
+  removeBook: book => dispatch(removeBook(book)),
+});
+
 BooksList.propTypes = {
   books: PropTypes.arrayOf(
     PropTypes.shape({
@@ -44,6 +54,7 @@ BooksList.propTypes = {
       category: PropTypes.string,
     }),
   ).isRequired,
+  removeBook: PropTypes.func.isRequired,
 };
 
-export default connect(mapStateToProps)(BooksList);
+export default connect(mapStateToProps, mapDispatchToProps)(BooksList);
