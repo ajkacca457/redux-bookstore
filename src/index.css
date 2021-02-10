@@ -10,46 +10,6 @@ body {
   font-family: 'Montserrat', sans-serif;
 }
 
-table tr {
-  background-color: #d3d3d3;
-  height: 40px;
-}
-
-.booksform {
-  width: 40%;
-  margin: 2% auto;
-  text-align: center;
-  background-color: white;
-  padding: 10px;
-}
-
-.form {
-  display: inline;
-}
-
-input,
-select {
-  width: 90%;
-  margin: 10px;
-  height: 25px;
-}
-
-form button {
-  width: 50%;
-  height: 30px;
-  background-color: orangered;
-  border: none;
-  color: white;
-  border-radius: 5px;
-}
-
-.booksform h3 {
-  background-color: #212f3c;
-  color: white;
-  margin: 5px;
-  padding: 5px;
-}
-
 .Bookstore-CMS {
   width: 240px;
   height: 37px;
@@ -88,6 +48,7 @@ form button {
   letter-spacing: 1.9px;
   color: #121212;
   margin-left: 30px;
+  margin-right: 5px;
 }
 
 .left-items {
@@ -110,13 +71,13 @@ form button {
 
 .book {
   background-color: white;
+  border: solid 1px #e8e8e8;
   width: 100%;
   margin: 1% 0;
-  padding: 2%;
+  padding: 1%;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  border: solid 1px #e8e8e8;
 }
 
 .School-of {
@@ -236,4 +197,56 @@ form button {
   border-radius: 2px;
   font-family: 'Roboto Slab', serif;
   color:white;
+}
+
+.Line {
+  opacity: .1;
+  width: 85%;
+  margin: auto;
+  height: 2px;
+  background-color: black;
+}
+
+.booksform {
+  width: 80%;
+  margin: 1% auto;
+  padding: 1%;}
+
+.form {
+  display: flex;
+}
+.formgroup-1{
+  flex:3;
+}
+.formgroup-2{
+  flex:2;
+}
+.form button {
+  flex:1;
+  height: 30px;
+  width: 50%;
+}
+
+.formgroup-1 input {
+  width: 90%;
+  height: 30px;
+  border-radius: 4px;
+  border: solid 1px #e8e8e8;
+  background-color: #ffffff;
+  padding-left: 20px;
+}
+.formgroup-2 select {
+  width: 90%;
+  height: 35px;
+  border-radius: 4px;
+  border: solid 1px #e8e8e8;
+  background-color: #ffffff;
+  padding-left: 10px;
+}
+.booksform h3 {
+margin: 5px;
+font-family: Montserrat;
+font-size: 20px;
+font-weight: bold;
+color: #888888;
 }
