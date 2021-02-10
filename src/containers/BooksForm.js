@@ -52,7 +52,7 @@ const BooksForm = props => {
             id="title"
             value={title}
             onChange={handleChange}
-            placeholder="enter book name"
+            placeholder="Book Title"
           />
         </div>
         <div className="formgroup-2">
