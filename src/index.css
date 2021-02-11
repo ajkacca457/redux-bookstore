@@ -1,49 +1,257 @@
-@import url('https://fonts.googleapis.com/css2?family=Noto+Serif&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
 
 body {
   margin: 0;
   padding: 0;
-  font-family: 'Noto Serif', serif;
-  background-color: #212f3c;
   box-sizing: border-box;
+  background-color: #f5f6fa;
+  font-family: 'Montserrat', sans-serif;
 }
 
-table tr {
-  background-color: #d3d3d3;
+.Bookstore-CMS {
+  width: 240px;
+  height: 37px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 30px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #0290ff;
+  margin: 0;
+}
+
+.panel-bg {
+  background-color: #fff;
+  margin: 0;
+  padding: 1% 5%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.BOOKS {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 13px;
+  letter-spacing: 1.9px;
+  color: #121212;
+  margin-left: 30px;
+}
+
+.CATEGORIES {
+  opacity: 0.5;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 13px;
+  letter-spacing: 1.9px;
+  color: #121212;
+  margin-left: 30px;
+  margin-right: 5px;
+}
+
+.left-items {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.icon {
+  color: #0290ff;
+  padding: 5px;
+  border-radius: 50%;
+  border: solid 1px #e8e8e8;
+}
+
+.booklistcont {
+  width: 80%;
+  margin: 2% auto;
+}
+
+.book {
+  background-color: white;
+  border: solid 1px #e8e8e8;
+  width: 100%;
+  margin: 1% 0;
+  padding: 1%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.School-of {
+  margin: 0;
+  opacity: 0.5;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: bold;
+  font-size: 13px;
+  color: #121212;
+}
+
+.author {
+  margin: 0;
+  opacity: 0.8;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: bold;
+  font-size: 12px;
+  color: #4386bf;
+}
+
+.title {
+  margin: 5px 0;
+  font-family: 'Roboto Slab', serif;
+  font-size: 18px;
+  font-weight: bold;
+  color: #121212;
+}
+
+.btndiv {
+  margin-top: 5px;
+}
+
+.btndiv button {
+  background-color: transparent;
+  border: none;
+  font-family: 'Roboto Slab', serif;
+  font-size: 13px;
+  font-weight: 300;
+  color: #4386bf;
+  opacity: 0.8;
+  margin-right: 5px;
+}
+
+.percent {
+  font-size: 25px;
+  color: #121212;
+  margin: 0;
+  opacity: 0.9;
+}
+
+.subpercent {
+  margin: 5px 0;
+  color: #121212;
+  opacity: 0.6;
+}
+
+.progress-bar {
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  background: #ddd;
+  margin-right: 10px;
+  background-image: conic-gradient(#307bbe 180deg 65%, #e8e8e8 10%);
+}
+
+.progress-bar .progress-bar-inner {
+  box-sizing: border-box;
+  border-radius: 50%;
+  width: 40px;
   height: 40px;
+  margin: auto;
+  background: #fff;
+  text-align: center;
+  padding-top: 30%;
+}
+
+.bookprogress {
+  display: flex;
+  align-items: flex-start;
+  flex: 3;
+  justify-content: center;
+}
+
+.bookinfo,
+.bookchapter {
+  flex: 1;
+}
+
+.bookchapter {
+  text-align: left;
+}
+
+.Current-Chapter {
+  opacity: 0.5;
+  font-family: 'Roboto Slab', serif;
+  font-size: 13px;
+  font-weight: 300;
+  color: #121212;
+  margin: 5px 0;
+}
+
+.Current-Lesson {
+  font-family: 'Roboto Slab', serif;
+  font-size: 16px;
+  font-weight: 300;
+  letter-spacing: -0.4px;
+  color: #121212;
+  margin: 5px 0;
+}
+
+.updatebtn {
+  background-color: #0290ff;
+  padding: 5px 10px;
+  border: none;
+  border-radius: 2px;
+  font-family: 'Roboto Slab', serif;
+  color: white;
+}
+
+.Line {
+  opacity: 0.1;
+  width: 85%;
+  margin: auto;
+  height: 2px;
+  background-color: black;
 }
 
 .booksform {
-  width: 40%;
-  margin: 2% auto;
-  text-align: center;
-  background-color: white;
-  padding: 10px;
+  width: 80%;
+  margin: 1% auto;
+  padding: 1%;
 }
 
 .form {
-  display: inline;
+  display: flex;
 }
 
-input,
-select {
-  width: 90%;
-  margin: 10px;
-  height: 25px;
+.formgroup-1 {
+  flex: 3;
 }
 
-form button {
-  width: 50%;
+.formgroup-2 {
+  flex: 2;
+}
+
+.form button {
+  flex: 1;
   height: 30px;
-  background-color: orangered;
-  border: none;
-  color: white;
-  border-radius: 5px;
+  width: 50%;
+}
+
+.formgroup-1 input {
+  width: 90%;
+  height: 30px;
+  border-radius: 4px;
+  border: solid 1px #e8e8e8;
+  background-color: #fff;
+  padding-left: 20px;
+}
+
+.formgroup-2 select {
+  width: 90%;
+  height: 35px;
+  border-radius: 4px;
+  border: solid 1px #e8e8e8;
+  background-color: #fff;
+  padding-left: 10px;
 }
 
 .booksform h3 {
-  background-color: #212f3c;
-  color: white;
   margin: 5px;
-  padding: 5px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 20px;
+  font-weight: bold;
+  color: #888;
 }

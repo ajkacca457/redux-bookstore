@@ -6,6 +6,7 @@ import { Provider } from 'react-redux';
 import App from './components/App';
 import { books } from './data/appdata';
 import Allreducers from './reducers/index';
+import '@fortawesome/fontawesome-free/css/all.min.css';
 
 const mystore = createStore(Allreducers, { books, filter: 'All' });
 

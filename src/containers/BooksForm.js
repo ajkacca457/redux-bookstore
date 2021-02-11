@@ -45,22 +45,17 @@ const BooksForm = props => {
     <div className="booksform">
       <h3>Add New Book</h3>
       <form className="form" onSubmit={handleSubmit}>
-        <div className="formgroup">
-          <span>Book Name: </span>
-          {' '}
-          <br />
+        <div className="formgroup-1">
           <input
             type="text"
             name="title"
             id="title"
             value={title}
             onChange={handleChange}
-            placeholder="enter book name"
+            placeholder="Book Title"
           />
         </div>
-        <div className="formgroup">
-          <span>Book Category: </span>
-          <br />
+        <div className="formgroup-2">
           <select
             name="category"
             id="category"
@@ -74,7 +69,7 @@ const BooksForm = props => {
             ))}
           </select>
         </div>
-        <button type="submit">Submit</button>
+        <button type="submit" className="updatebtn">ADD BOOK</button>
       </form>
     </div>
   );
